@@ -1,6 +1,7 @@
 
 # * Program 1
-def fac():
+def factorial():
+    """Calculating Factorial of a Number"""
     a = int(input('Enter a no.:\n'))
     b = 1
     for i in range(1, a+1):
@@ -9,6 +10,7 @@ def fac():
 
 
 def fib():
+    """ Function to generate Fibonacci series"""
     a = int(input('Enter a no.:\n'))
     e, b, c = 0, 1, 0
     print(e, b, end=' ')
@@ -21,6 +23,7 @@ def fib():
 
 
 def palin():
+    """ Palindrome checker"""
     a = int(input('Enter a no.:\n'))
     b = len(str(a))-1
     c = a
@@ -35,10 +38,11 @@ def palin():
         return
     print('Its not a Palindrome.')
 
+
 # * Program 2
 
-
 def ams():
+    """ Armstrong checker"""
     a = int(input('Enter a no.:\n'))
     b = len(str(a))
     c = a
@@ -48,28 +52,31 @@ def ams():
         e += d
         a //= 10
     if c == e:
-        print('It is an Amstrong no.')
+        print('It is an Armstrong no.')
         return
-    print('Its not an Amstrong no.')
+    print('Its not an Armstrong no.')
 
 
 def floyd():
+    """ Function to generate Floyd's Triangle"""
     a = int(input('Enter the number of Rows:\n'))
     for i in range(1, a+1):
         for j in range(1, i+1):
             print(j, end=' ')
         print()
 
+
 # * Program 3
 
-
 def MSEARCH(STATES):
+    """Sorting States from a list"""
     for i in STATES:
         if i[0] in 'Mm':
             print(i)
 
 
 def remove_letter(sentence, letter):
+    """ Removing a letter from a string"""
     c = ''
     for i in sentence:
         if i != letter:
@@ -78,12 +85,14 @@ def remove_letter(sentence, letter):
 
 
 def cnt(sentence):
+    """ Count the number of words in a sentence"""
     print('Number of words = ', sentence.count(' ')+1)
+
 
 # * Program 4
 
-
 def max_list(l):
+    """ Identify the element with the max len from a list"""
     a = l[0]
     for b in l:
         if b > a:
@@ -92,6 +101,7 @@ def max_list(l):
 
 
 def min_list(l):
+    """ Identify the element with the least len from a list"""
     a = l[0]
     for b in l:
         if b < a:
@@ -100,15 +110,17 @@ def min_list(l):
 
 
 def sum_list(l):
+    """ Calculating the sum of a list"""
     a = 0
     for b in l:
         a += b
     print('The Sum of the elements are ', a, '.')
 
+
 # * Program 5
 
-
 def separatebycharacter():
+    """ Replace all whitespace with an emoji"""
     c = ''
     with open('f.txt', 'r') as f:
         a = f.read()
@@ -121,6 +133,7 @@ def separatebycharacter():
 
 
 def remove_a():
+    """ Remove all lines containing the letter a"""
     c = []
     b = []
     with open('f.txt') as f:
@@ -138,15 +151,15 @@ def remove_a():
     else:
         print('The File does not have the character\'a\'')
 
+
 # * Program 6
 
-
 def CreateTextFile():
-    '''Creates a text file named data while'''
+    """Creates a text file named data while"""
     with open('data.txt', 'w') as f:
         f.write('Yello')
 
 
 def CopyVowelWord():
-    '''To create text file named vowel which will store all the
-    words starting with vowel from the text file data'''
+    """To create text file named vowel which will store all the
+    words starting with vowel from the text file data"""
