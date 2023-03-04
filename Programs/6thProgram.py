@@ -10,8 +10,8 @@ def CreateTextFile():
 
 
 def CopyVowelWord():
-    '''To create text file named vowel which will store all the
-    words starting with vowel from the text file data'''
+    """To create text file named vowel which will store all the
+    words starting with vowel from the text file data"""
     vowel = []
     with open('data.txt') as f:
         a = f.read().split()
@@ -24,7 +24,7 @@ def CopyVowelWord():
 
 
 def display():
-    '''Displays the content of both the text files'''
+    """Displays the content of both the text files"""
     print('The Contents of data.txt is:')
     with open('data.txt') as f:
         print(f.read())
@@ -34,7 +34,7 @@ def display():
 
 
 def TotalNumberOfWordsStartingWithVowel():
-    '''Displays the no. of words starting with vowels in the data.txt file'''
+    """Displays the no. of words starting with vowels in the data.txt file"""
     vowel = 0
     with open('data.txt') as f:
         a = f.read().split()
