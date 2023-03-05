@@ -265,6 +265,7 @@ def display():
 
 def createandaddtobinaryfile():
     s = {}
+    global n
     n = int(input('How many records do you want to add?\n'))
     with open('student.dat', 'wb') as f:
         for i in range(n):
@@ -278,8 +279,9 @@ def countrec():
     a = 0
     s = {}
     with open('student.dat', 'rb') as f:
-        s = p.load(f)
-        if s['Percentage'] > 75:
-            print(s)
-            a += 1
+        for i in range(n):
+            s = p.load(f)
+            if s['Percentage'] > 75:
+                print(s)
+                a += 1
     print(f'The No. of students scoring above 75% are {a}.')
