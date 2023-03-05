@@ -1,5 +1,8 @@
 
+import pickle as p
 # * Program 1
+
+
 def factorial():
     """Calculating Factorial of a Number"""
     a = int(input('Enter a no.:\n'))
@@ -255,3 +258,28 @@ def display():
     print('The Content of wspace.txt is:')
     with open('wspace.txt') as f:
         print(f.read())
+
+
+# * Program 9
+
+
+def createandaddtobinaryfile():
+    s = {}
+    n = int(input('How many records do you want to add?\n'))
+    with open('student.dat', 'wb') as f:
+        for i in range(n):
+            s['Admission_number'] = int(input('Enter Admission number:\n'))
+            s['Student Name'] = input('Enter Student Name:\n')
+            s['Percentage'] = int(input('Enter Percentage:\n'))
+            p.dump(s, f)
+
+
+def countrec():
+    a = 0
+    s = {}
+    with open('student.dat', 'rb') as f:
+        s = p.load(f)
+        if s['Percentage'] > 75:
+            print(s)
+            a += 1
+    print(f'The No. of students scoring above 75% are {a}.')
