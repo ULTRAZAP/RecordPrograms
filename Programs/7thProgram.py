@@ -17,7 +17,8 @@ def CountAll():
 
         consonants = 0
         for i in content.lower():
-            vowels = ['a', 'e', 'i', 'o', 'u', ' ', ',', '.']  # Excluding vowels, whitespaces, periods & commas
+            # Excluding vowels, whitespaces, periods & commas
+            vowels = ['a', 'e', 'i', 'o', 'u', ' ', ',', '.']
             if i not in vowels:
                 consonants += 1
 
@@ -47,6 +48,30 @@ def ReplaceSpace():
             f.write(output)
 
 
-CreateTextFile7()
-print(CountAll())
-ReplaceSpace()
+def display():
+    print('The Content of content.txt is:')
+    with open("content.txt") as f1:
+        print(f1.read())
+    print('The Content of wspace.txt is:')
+    with open('wspace.txt') as f:
+        print(f.read())
+
+
+d = 'Yy'
+while d in 'Yy':
+    n = int(input('''Enter 1 to create a text file named content and add some text in it.
+                   Enter 2 to count number of lines, consonants, digits, spaces & words.
+                   Enter 3 to create another file called "wspace.txt" using the original which will contain the text after replacing all the blank spaces with '#'.
+                   Enter 4 to Read & display the contents of both the files.\n'''))
+    if n == 1:
+        CreateTextFile7()
+    elif n == 2:
+        CountAll()
+    elif n == 3:
+        print(
+            f'The no. of lines, consonants, digits, whitespaces and words are\n{ReplaceSpace()}')
+    elif n == 4:
+        display()
+    else:
+        print('Wrong Input!\nTry Again!')
+    d = input('Do you want to try again? (Y/N)\n')
