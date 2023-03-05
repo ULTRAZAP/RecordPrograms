@@ -248,6 +248,10 @@ def ReplaceSpace():
             f.write(output)
 
 
-CreateTextFile7()
-print(CountAll())
-ReplaceSpace()
+def display():
+    print('The Content of content.txt is:')
+    with open("content.txt") as f1:
+        print(f1.read())
+    print('The Content of wspace.txt is:')
+    with open('wspace.txt') as f:
+        print(f.read())
