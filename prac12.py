@@ -263,9 +263,12 @@ def display():
 # * Program 9
 
 
+global n
+n = 0
+
+
 def createandaddtobinaryfile():
     s = {}
-    global n
     n = int(input('How many records do you want to add?\n'))
     with open('student.dat', 'wb') as f:
         for i in range(n):
@@ -285,3 +288,44 @@ def countrec():
                 print(s)
                 a += 1
     print(f'The No. of students scoring above 75% are {a}.')
+
+# * Program 10
+
+
+def createbinary():
+    s = {}
+    n = int(input('Enter the number of companies:\n'))
+    with open('company.dat', 'wb') as f:
+        for i in range(n):
+            s['CompanyID'] = int(input('Enter Company ID:\n'))
+            s['CompanyName'] = input('Enter Company Name:\n')
+            s['Turnover'] = int(input('Enter Turnover:\n'))
+            p.dump(s, f)
+
+
+def display():
+    s = {}
+    with open('company.dat', 'rb') as f:
+        for i in range(n):
+            s = p.load(f)
+            print(s)
+
+
+def turnover():
+    s = {}
+    a = int(input('Enter a turnover:\n'))
+    with open('company,dat', 'rb') as f:
+        for i in range(n):
+            s = p.load(f)
+            if s['Turnover'] > a:
+                print(s)
+
+
+def companyid():
+    s = {}
+    a = int(input('Enter Company ID:\n'))
+    with open('company.dat', 'rb') as f:
+        for i in range(n):
+            s = p.load(f)
+            if s['CompanyID'] == a:
+                print(s)
