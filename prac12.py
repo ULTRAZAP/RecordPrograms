@@ -329,3 +329,21 @@ def companyid():
             s = p.load(f)
             if s['CompanyID'] == a:
                 print(s)
+
+# * Program 8
+
+
+def displaywords():
+    with open('story.txt') as f:
+        a = f.read().split()
+        for i in a:
+            if len(i) < 4:
+                print(i)
+
+
+def seachword():
+    e = input('Enter a word to be searched:\n')
+    with open('story.txt') as f:
+        a = f.read()
+        d = a.count(e)
+        print(f'The word {e} is {d} times repeating in the file.')
