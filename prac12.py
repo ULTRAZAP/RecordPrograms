@@ -259,16 +259,34 @@ def display():
     with open('wspace.txt') as f:
         print(f.read())
 
+# * Program 8
+
+
+def displaywords():
+    with open('story.txt') as f:
+        a = f.read().split()
+        for i in a:
+            if len(i) < 4:
+                print(i)
+
+
+def seachword():
+    e = input('Enter a word to be searched:\n')
+    with open('story.txt') as f:
+        a = f.read()
+        d = a.count(e)
+        print(f'The word {e} is {d} times repeating in the file.')
+
 
 # * Program 9
 
 
-global n
 n = 0
 
 
 def createandaddtobinaryfile():
     s = {}
+    global n
     n = int(input('How many records do you want to add?\n'))
     with open('student.dat', 'wb') as f:
         for i in range(n):
@@ -292,8 +310,12 @@ def countrec():
 # * Program 10
 
 
+n = 0
+
+
 def createbinary():
     s = {}
+    global n
     n = int(input('Enter the number of companies:\n'))
     with open('company.dat', 'wb') as f:
         for i in range(n):
@@ -329,21 +351,3 @@ def companyid():
             s = p.load(f)
             if s['CompanyID'] == a:
                 print(s)
-
-# * Program 8
-
-
-def displaywords():
-    with open('story.txt') as f:
-        a = f.read().split()
-        for i in a:
-            if len(i) < 4:
-                print(i)
-
-
-def seachword():
-    e = input('Enter a word to be searched:\n')
-    with open('story.txt') as f:
-        a = f.read()
-        d = a.count(e)
-        print(f'The word {e} is {d} times repeating in the file.')

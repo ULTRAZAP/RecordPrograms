@@ -1,11 +1,11 @@
 # * Program 10
 import pickle as p
-global n
 n = 0
 
 
 def createbinary():
     s = {}
+    global n
     n = int(input('Enter the number of companies:\n'))
     with open('company.dat', 'wb') as f:
         for i in range(n):

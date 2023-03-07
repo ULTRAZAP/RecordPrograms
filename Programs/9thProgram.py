@@ -1,5 +1,6 @@
 # * Program 9
 import pickle as p
+n = 0
 
 
 def createandaddtobinaryfile():
