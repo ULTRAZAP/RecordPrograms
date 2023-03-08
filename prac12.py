@@ -263,6 +263,7 @@ def display():
 
 
 def displaywords():
+    '''Displays the words from the text file story which are less than 4 characters'''
     with open('story.txt') as f:
         a = f.read().split()
         for i in a:
@@ -271,25 +272,25 @@ def displaywords():
 
 
 def seachword():
+    '''Searches the no. of times a word is repeated inside the file'''
     e = input('Enter a word to be searched:\n')
     with open('story.txt') as f:
-        a = f.read()
+        a = f.read().split()
         d = a.count(e)
         print(f'The word {e} is {d} times repeating in the file.')
 
 
 # * Program 9
-
-
-n = 0
+c = 0
 
 
 def createandaddtobinaryfile():
+    '''Creates a binary file names student which stores admission no.,  student name and percentage in dictionary format'''
     s = {}
-    global n
-    n = int(input('How many records do you want to add?\n'))
+    global c
+    c = int(input('How many records do you want to add?\n'))
     with open('student.dat', 'wb') as f:
-        for i in range(n):
+        for i in range(c):
             s['Admission_number'] = int(input('Enter Admission number:\n'))
             s['Student Name'] = input('Enter Student Name:\n')
             s['Percentage'] = int(input('Enter Percentage:\n'))
@@ -297,28 +298,29 @@ def createandaddtobinaryfile():
 
 
 def countrec():
+    '''Counts the no. of students who's percentage is above 75'''
     a = 0
     s = {}
     with open('student.dat', 'rb') as f:
-        for i in range(n):
+        for i in range(c):
             s = p.load(f)
             if s['Percentage'] > 75:
                 print(s)
                 a += 1
     print(f'The No. of students scoring above 75% are {a}.')
 
+
 # * Program 10
-
-
-n = 0
+c = 0
 
 
 def createbinary():
+    '''Creates a binary file named company which stores the id of the companies, their names and turnover respectively'''
     s = {}
-    global n
-    n = int(input('Enter the number of companies:\n'))
+    global c
+    c = int(input('Enter the number of companies:\n'))
     with open('company.dat', 'wb') as f:
-        for i in range(n):
+        for i in range(c):
             s['CompanyID'] = int(input('Enter Company ID:\n'))
             s['CompanyName'] = input('Enter Company Name:\n')
             s['Turnover'] = int(input('Enter Turnover:\n'))
@@ -326,28 +328,90 @@ def createbinary():
 
 
 def display():
+    '''Displays all the companies dictionaries'''
     s = {}
     with open('company.dat', 'rb') as f:
-        for i in range(n):
+        for i in range(c):
             s = p.load(f)
             print(s)
 
 
 def turnover():
+    '''Prints the turnover of the companies which are higher than the input turnover'''
     s = {}
     a = int(input('Enter a turnover:\n'))
     with open('company,dat', 'rb') as f:
-        for i in range(n):
+        for i in range(c):
             s = p.load(f)
             if s['Turnover'] > a:
                 print(s)
 
 
 def companyid():
+    '''Searches for a particular company using its id and prints only its data'''
     s = {}
     a = int(input('Enter Company ID:\n'))
     with open('company.dat', 'rb') as f:
-        for i in range(n):
+        for i in range(c):
             s = p.load(f)
             if s['CompanyID'] == a:
                 print(s)
+
+
+# * Program 11
+
+
+a = 0
+
+
+def bina():
+    '''Creates a binary file named travel which stores the travel id, from and to address respectively'''
+    s = {}
+    global a
+    a = int(input('Enter the number of records you want to input:\n'))
+    with open('travel.dat', 'wb') as f:
+        for i in range(a):
+            s['TravelID'] = int(input('Enter Travel ID:\n'))
+            s['From'] = input('From:\n')
+            s['To'] = input('To:\n')
+            p.dump(s, f)
+
+
+def apend():
+    '''Adds travel data to the travel binary file'''
+    s = {}
+    global a
+    c = int(input('Enter the number of records you want to add:\n'))
+    a += c
+    with open('travel.dat', 'ab') as f:
+        for i in range(c):
+            s['TravelID'] = int(input('Enter Travel ID:\n'))
+            s['From'] = input('From:\n')
+            s['To'] = input('To:\n')
+            p.dump(s, f)
+
+
+def updatetravelid():
+    '''Changes the values of the travel data using travel id'''
+    s = {}
+    c = int(input('Enter the Travel ID:\n'))
+    d = input('Enter the changed From:\n')
+    e = input('Enter the changed To:\n')
+    with open('travel.dat', 'rb+') as f:
+        for i in range(a):
+            r = f.tell()  # This should always be before load
+            s = p.load(f)
+            if s['TravelID'] == c:
+                s['From'] = d
+                s['To'] = e
+                f.seek(r)
+                p.dump(s, f)
+
+
+def display():
+    '''Displays the data on the binary file travel'''
+    s = {}
+    with open('travel.dat', 'rb') as f:
+        for i in range(a):
+            s = p.load(f)
+            print(s)

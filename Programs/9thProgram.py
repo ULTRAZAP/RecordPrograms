@@ -9,7 +9,7 @@ def createandaddtobinaryfile():
     global c
     c = int(input('How many records do you want to add?\n'))
     with open('student.dat', 'wb') as f:
-        for i in range(n):
+        for i in range(c):
             s['Admission_number'] = int(input('Enter Admission number:\n'))
             s['Student Name'] = input('Enter Student Name:\n')
             s['Percentage'] = int(input('Enter Percentage:\n'))

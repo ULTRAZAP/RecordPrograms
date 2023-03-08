@@ -9,7 +9,7 @@ def createbinary():
     global c
     c = int(input('Enter the number of companies:\n'))
     with open('company.dat', 'wb') as f:
-        for i in range(n):
+        for i in range(c):
             s['CompanyID'] = int(input('Enter Company ID:\n'))
             s['CompanyName'] = input('Enter Company Name:\n')
             s['Turnover'] = int(input('Enter Turnover:\n'))
