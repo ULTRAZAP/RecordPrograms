@@ -47,9 +47,9 @@ def TotalNumberOfWordsStartingWithVowel():
 d = 'Yy'
 while d in 'Yy':
     n = int(input('''Enter 1 to create a text file named data and add some text in it.
-                   Enter 2 to copy all the words starting with a vowel from data and adding them to a new text file named vowel.
-                   Enter 3 to display the content of both the files.
-                   Enter 4 to count the number of words starting with vowel in data.txt.\n'''))
+Enter 2 to copy all the words starting with a vowel from data and adding them to a new text file named vowel.
+Enter 3 to display the content of both the files.
+Enter 4 to count the number of words starting with vowel in data.txt.\n'''))
     if n == 1:
         CreateTextFile()
     elif n == 2:

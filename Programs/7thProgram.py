@@ -60,9 +60,9 @@ def display():
 d = 'Yy'
 while d in 'Yy':
     n = int(input('''Enter 1 to create a text file named content and add some text in it.
-                   Enter 2 to count number of lines, consonants, digits, spaces & words.
-                   Enter 3 to create another file called "wspace.txt" using the original which will contain the text after replacing all the blank spaces with '#'.
-                   Enter 4 to Read & display the contents of both the files.\n'''))
+Enter 2 to count number of lines, consonants, digits, spaces & words.
+Enter 3 to create another file called "wspace.txt" using the original which will contain the text after replacing all the blank spaces with '#'.
+Enter 4 to Read & display the contents of both the files.\n'''))
     if n == 1:
         CreateTextFile7()
     elif n == 2:

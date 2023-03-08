@@ -27,8 +27,8 @@ def cnt(sentence):
 d = 'Yy'
 while d in 'Yy':
     n = int(input('''Enter 1 to display all the names from the list  STATES, which are starting with alphabet M.
-                   Enter 2 to enter a sentence and remove a letter from it.
-                   Enter 3 to count the no. of words in a sentence.\n'''))
+Enter 2 to enter a sentence and remove a letter from it.
+Enter 3 to count the no. of words in a sentence.\n'''))
     if n == 1:
         states = ["MP", "UP", "DL", "UK", "KA", 'MH']
         MSEARCH(states)

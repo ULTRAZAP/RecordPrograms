@@ -30,8 +30,8 @@ d = 'Yy'
 while d in 'Yy':
     li = eval(input('Enter a list containing no.:\n'))
     n = int(input('''Enter 1 to find the highest no. in the list.
-                   Enter 2 to find the lowest value in the list.
-                   Enter 3 to calculate the sum of all the values in the list.\n'''))
+Enter 2 to find the lowest value in the list.
+Enter 3 to calculate the sum of all the values in the list.\n'''))
     if n == 1:
         max_list(li)
     elif n == 2:

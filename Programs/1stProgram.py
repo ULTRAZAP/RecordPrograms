@@ -41,8 +41,8 @@ def palin():
 d = 'Yy'
 while d in 'Yy':
     n = int(input('''Enter 1 to find Factorial of a number.
-                   Enter 2 to generate Fibonacci Series for x no.
-                   Enter 3 to check if a number is palindrome or not.\n'''))
+Enter 2 to generate Fibonacci Series for x no.
+Enter 3 to check if a number is palindrome or not.\n'''))
     if n == 1:
         factorial()
     elif n == 2:

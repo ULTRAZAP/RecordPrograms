@@ -36,7 +36,7 @@ def remove_a():
 d = 'Yy'
 while d in 'Yy':
     n = int(input('''Enter 1 to seperate the words in a txt file with 😊.
-                   Enter 2 to remove any lines containing the character 'a' from a txt file and adding them to new text file.\n'''))
+Enter 2 to remove any lines containing the character 'a' from a txt file and adding them to new text file.\n'''))
     if n == 1:
         separatebycharacter()
     elif n == 2:
