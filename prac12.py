@@ -492,3 +492,43 @@ def searchemp():
                 e = False
     if e:
         print('The Record was not found.')
+
+# * Program 14
+
+
+hostel = []
+
+
+def isEmpty(s):
+    '''Checks if the stack is empty or not'''
+    if len(s) == 0:
+        return True
+    return False
+
+
+def push_element(l):
+    '''Adds the element to stack'''
+    hostel.append(l)
+
+
+def pop_element(s):
+    '''Checks if the stack is empty or not and returns a popped value from the stack'''
+    if isEmpty(s):
+        return 'Stack is Empty.'
+    return s.pop()
+
+
+def peek(s):
+    '''Returns the topmost element from the stack'''
+    if isEmpty(s):
+        return 'Stack is Empty.'
+    return s[-1]
+
+
+def display(s):
+    '''Displays the entire stack'''
+    if isEmpty(s):
+        print('Stack is Empty.')
+        return
+    for i in s[::-1]:
+        print(i)
