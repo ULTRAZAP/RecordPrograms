@@ -532,3 +532,52 @@ def display(s):
         return
     for i in s[::-1]:
         print(i)
+
+
+# * Program 15
+
+books = []
+
+
+def isEmpty(s):
+    '''Checks if the stack is Empty or not.'''
+    if len(s) == 0:
+        return True
+    return False
+
+
+def enterdictionary():
+    '''Stores the Book ID and Names of the Books in a dictionary.'''
+    global bookdic
+    e = eval(
+        input('Enter a dictionary containing Book ID And Book Name:\n'))
+    bookdic += e
+
+
+def pushvalues():
+    '''Adds the names of the Books starting with A or C to a stack.'''
+    for i in list(bookdic.values()):
+        if i[0] in 'CcAa':
+            books.append(i)
+
+
+def popvalues():
+    '''Removes and Returns a value from the stack.'''
+    if isEmpty(books):
+        return 'Stack Empty'
+    return books.pop()
+
+
+def peekvalues():
+    '''Returns the topmost value from the stack.'''
+    if isEmpty(books):
+        return 'Stack Empty'
+    return books[-1]
+
+
+def display():
+    '''Displays the whole stack from the top.'''
+    if isEmpty(books):
+        print('Stack Empty')
+    for i in books[::-1]:
+        print(i)
