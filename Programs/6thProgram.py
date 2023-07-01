@@ -20,7 +20,7 @@ def CopyVowelWord():
                 vowel.append(i)
 
     with open('vowel.txt', 'w') as v:
-        f.writelines(vowel)
+        v.writelines(vowel)
 
 
 def display():
