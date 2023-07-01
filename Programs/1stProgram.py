@@ -24,14 +24,14 @@ def fib():
 def palin():
     """ Palindrome checker"""
     a = int(input('Enter a no.:\n'))
-    b = len(str(a))-1
+    b = 10 ** (len(str(a))-1)
     c = a
     e = 0
     while a != 0:
-        d = (a % 10) ** b
+        d = (a % 10) * b
         e += d
         a //= 10
-        b -= 1
+        b //= 10
     if e == c:
         print('Its a Palindrome.')
         return
