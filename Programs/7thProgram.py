@@ -65,11 +65,11 @@ Enter 3 to create another file called "wspace.txt" using the original which will
 Enter 4 to Read & display the contents of both the files.\n'''))
     if n == 1:
         CreateTextFile7()
-    elif n == 2:
-        CountAll()
     elif n == 3:
+        ReplaceSpace()
+    elif n == 2:
         print(
-            f'The no. of lines, consonants, digits, whitespaces and words are\n{ReplaceSpace()}')
+            f'The no. of lines, consonants, digits, whitespaces and words are\n{CountAll}')
     elif n == 4:
         display()
     else:
