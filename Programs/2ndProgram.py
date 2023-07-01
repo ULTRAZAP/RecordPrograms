@@ -19,9 +19,11 @@ def ams():
 def floyd():
     """ Function to generate Floyd's Triangle"""
     a = int(input('Enter the number of Rows:\n'))
+    c=1
     for i in range(1, a+1):
         for j in range(1, i+1):
-            print(j, end=' ')
+            print(c, end=' ')
+            c+=1
         print()
 
 
