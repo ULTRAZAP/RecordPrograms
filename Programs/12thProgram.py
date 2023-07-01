@@ -35,6 +35,7 @@ def totalpercen():
 
 def display():
     '''Displays the name of the student who have any marks that are grater than 80'''
+    test = True
     with open('student.csv') as f:
         c = csv.reader(f)
         for i in c:
@@ -43,6 +44,9 @@ def display():
                 if a > 80:
                     print(
                         f'{i[1]} has scored more than 80 in Subject {i.index(j)-1}.')
+                    test = False
+        if test:
+            print('None')
 
 
 d = 'Yy'
