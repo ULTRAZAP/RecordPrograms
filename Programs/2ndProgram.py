@@ -27,8 +27,8 @@ def floyd():
 
 d = 'Yy'
 while d in 'Yy':
-    n = int(input('''Enter 1 to find Factorial of a number.
-Enter 2 to generate Fibonacci Series for x no.\n'''))
+    n = int(input('''Enter 1 to find if a No. is Amstrong or not.
+Enter 2 to generate Floyd's Triangle for x no.\n'''))
     if n == 1:
         ams()
     elif n == 2:
