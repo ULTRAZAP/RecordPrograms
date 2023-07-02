@@ -1,6 +1,7 @@
 # * Program 15
 
 books = []
+bookdic = {}
 
 
 def isEmpty(s):
@@ -12,10 +13,10 @@ def isEmpty(s):
 
 def enterdictionary():
     '''Stores the Book ID and Names of the Books in a dictionary.'''
-    global bookdic
     e = eval(
         input('Enter a dictionary containing Book ID And Book Name:\n'))
-    bookdic += e
+    bookdic.update(e)
+    print(bookdic)
 
 
 def pushvalues():
@@ -23,6 +24,7 @@ def pushvalues():
     for i in list(bookdic.values()):
         if i[0] in 'CcAa':
             books.append(i)
+    bookdic.clear()
 
 
 def popvalues():
