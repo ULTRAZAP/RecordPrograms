@@ -29,7 +29,7 @@ def turnover():
     '''Prints the turnover of the companies which are higher than the input turnover'''
     s = {}
     a = int(input('Enter a turnover:\n'))
-    with open('company,dat', 'rb') as f:
+    with open('company.dat', 'rb') as f:
         for i in range(c):
             s = p.load(f)
             if s['Turnover'] > a:
