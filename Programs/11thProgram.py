@@ -60,7 +60,7 @@ def display():
 d = 'Yy'
 while d in 'Yy':
     n = int(input('''Enter 1 to create a binary file named Travel and add Travel id, From and To.
-Enter 2 to add data to the
+Enter 2 to add data to the binary file.
 Enter 3 to update a record based on the Travel ID.
 Enter 4 to read contents of the file.\n'''))
     if n == 1:
