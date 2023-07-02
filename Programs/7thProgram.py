@@ -69,7 +69,7 @@ Enter 4 to Read & display the contents of both the files.\n'''))
         ReplaceSpace()
     elif n == 2:
         print(
-            f'The no. of lines, consonants, digits, whitespaces and words are\n{CountAll}')
+            f'The no. of lines, consonants, digits, whitespaces and words are\n{CountAll()}')
     elif n == 4:
         display()
     else:
