@@ -16,7 +16,6 @@ def enterdictionary():
     e = eval(
         input('Enter a dictionary containing Book ID And Book Name:\n'))
     bookdic.update(e)
-    print(bookdic)
 
 
 def pushvalues():
